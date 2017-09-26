@@ -10,8 +10,7 @@ import javax.inject.Singleton;
  * Created by Charles Ng on 26/9/2017.
  */
 
-@Module(subcomponents = {
-    MainActivityComponent.class})
+@Module
 public class AppModule {
 
   @Provides
