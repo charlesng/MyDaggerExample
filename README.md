@@ -11,7 +11,7 @@ https://medium.com/@iammert/new-android-injector-with-dagger-2-part-1-8baa60152a
 </p>
 
 # App Components
-```
+```java
 @Component(modules = {
     AndroidInjectionModule.class, AndroidSupportInjectionModule.class,
     AppModule.class,
@@ -21,7 +21,7 @@ public interface AppComponent {
 }
 ```
 # Custom Modules
-```
+```java
 @Module
 public class AppModule {
 
@@ -35,7 +35,7 @@ public class AppModule {
 ```
 
 # ActivityBuilder
-```
+```java
 @Module
 public abstract class ActivityBuilder {
 
@@ -52,7 +52,7 @@ public abstract class ActivityBuilder {
 ```
 
 # One of the sample Activity
-```
+```java
 public class MainActivity extends DaggerAppCompatActivity {
   @Inject SharedPreferences sharedPreferences;
 
@@ -83,7 +83,7 @@ public class MainActivity extends DaggerAppCompatActivity {
 ```
 
 # Application
-```
+```java
 public class MyApplication extends Application implements HasActivityInjector {
 
   @Inject
