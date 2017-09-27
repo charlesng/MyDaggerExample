@@ -1,6 +1,8 @@
 package com.example.charlesng.daggerexample.di;
 
-import com.example.charlesng.daggerexample.MainActivity;
+import com.example.charlesng.daggerexample.ui.MainActivity;
+import com.example.charlesng.daggerexample.ui.MainFragmentActivity;
+import com.example.charlesng.daggerexample.ui.MainFragmentActivityFragment;
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
@@ -11,7 +13,13 @@ import dagger.android.ContributesAndroidInjector;
 @Module
 public abstract class ActivityBuilder {
 
-  @ContributesAndroidInjector(modules = MainActivityModule.class)
+  @ContributesAndroidInjector(modules = MainActivity.MainActivityModule.class)
   abstract MainActivity bindMainActivity();
+
+  @ContributesAndroidInjector(modules = MainFragmentActivity.MainFragmentActivityModule.class)
+  abstract  MainFragmentActivity bindMainFragmentActivity();
+
+  @ContributesAndroidInjector(modules = MainFragmentActivityFragment.MainFragmentActivityFragmentModule.class)
+  abstract MainFragmentActivityFragment bindMainFragmentActivityFragment();
 
 }
